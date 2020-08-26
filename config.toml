@@ -1,0 +1,117 @@
+# default config
+baseURL = "https://examplesite.org"
+languageCode = "en-us"
+title = "Site de Sarvhangel"
+summaryLength = "10"
+paginate = 6
+removePathAccents = true
+
+# output
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+# render unsafe html
+[markup.goldmark.renderer]
+unsafe = true
+
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/slick/slick.css"
+[[params.plugins.css]]
+link = "plugins/themify-icons/themify-icons.css"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/slick/slick.min.js"
+[[params.plugins.js]]
+link = "plugins/headroom/headroom.js"
+[[params.plugins.js]]
+link = "plugins/instafeed/instafeed.min.js"
+[[params.plugins.js]]
+link = "plugins/masonry/masonry.js"
+[[params.plugins.js]]
+link = "plugins/reading-time/readingTime.min.js"
+[[params.plugins.js]]
+link = "plugins/smooth-scroll/smooth-scroll.js"
+[[params.plugins.js]]
+link = "plugins/search/fuse.min.js"
+[[params.plugins.js]]
+link = "plugins/search/mark.js"
+[[params.plugins.js]]
+link = "plugins/search/search.js"
+
+# navigation
+[[menu.main]]
+name = "Catégories"
+URL = "categories"
+weight = 1
+
+[[menu.main]]
+name = "Tags"
+URL = "tags"
+weight = 2
+
+# deult parameter
+[params]
+logo = "images/logo.png"
+home = "Accueil"
+# theme layout ( two layout is available, "1" and "2" )
+layout = "1"
+# Meta data
+description = "Ici on parle de voyages, de nourriture et de jeux vidéos !"
+# Preloader
+preloader = true
+# search
+search = false
+# about author
+author = "Sarvhangel"
+author_image = "images/banner-img.png"
+bio = "Cat addict, future pâtissière et fan de jeux vidéos !"
+# Contact info
+email = "sarvhangel@gmail.com"
+# Contact Form Action
+contact_form_action = "#"
+# Google Analitycs
+# google_analitycs_id = "Your ID"
+# copyright
+copyright = "© Copyright 2020 - Fait avec ❤️ par Sarvhangel."
+
+# pixaby thanks
+[[params.pixabay]]
+name = "Kanenori"
+url = "https://pixabay.com/users/kanenori-4749850/"
+
+[[params.pixabay]]
+name = "Marcisim"
+url = "https://pixabay.com/users/marcisim-595307/"
+
+[[params.pixabay]]
+name = "Dimhou"
+url = "https://pixabay.com/users/dimhou-5987327/"
+
+[[params.pixabay]]
+name = "Fill"
+url = "https://pixabay.com/users/fill-8988/"
+
+[[params.pixabay]]
+name = "Free-Photos"
+url = "https://pixabay.com/users/free-photos-242387/"
+
+# social site
+[[params.social]]
+icon = "ti-facebook"
+URL = "https://www.facebook.com/marion.cardin7"
+
+[[params.social]]
+icon = "ti-instagram"
+URL = "https://www.instagram.com/sarvhangel/"
+
+[[params.social]]
+icon = "ti-github"
+URL = "https://github.com/Sarvhangel"
