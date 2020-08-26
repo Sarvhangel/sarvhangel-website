@@ -1,6 +1,6 @@
 # default config
-baseURL = "https://examplesite.org"
-languageCode = "en-us"
+baseURL = "/"
+languageCode = "fr-FR"
 title = "Site de Sarvhangel"
 summaryLength = "10"
 paginate = 6
