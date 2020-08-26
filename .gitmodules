@@ -1,3 +1,4 @@
-[submodule "themes/parsa-hugo"]
-	path = themes/parsa-hugo
-	url = https://github.com/themefisher/parsa-hugo
+[submodule "public"]
+	path = public
+	url = https://github.com/Sarvhangel/sarvhangel.github.io
+	branch = master
