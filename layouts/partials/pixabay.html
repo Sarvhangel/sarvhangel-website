@@ -1,0 +1,11 @@
+<!-- Pixabay thanks -->
+{{- if not (isset .Params "image") }}
+<div class="row thanks">
+  <div class="col-12 mb-1">Merci à tous ces artistes pour leurs images Pixabay !</div>
+  <div class="col-12">
+    {{ range .Site.Params.Pixabay }}
+    <a href={{.url}} target="_blank">{{.name}}</a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
