@@ -26,7 +26,7 @@
 <!-- blog post -->
 <section class="section">
   <div class="container">
-    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") }}
+    {{ $paginator := .Paginate (where (where .Site.RegularPages "Type" "post") "Draft" false) }}
     <div class="row masonry-container">
       {{ range $paginator.Pages }}
       <div class="col-lg-4 col-sm-6 mb-5">

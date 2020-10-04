@@ -89,6 +89,12 @@ h6, .h6 {
   content: "💙";
 }
 
+.caption {
+  margin-top: -10px;
+  font-style: italic;
+  font-size: 13px;
+}
+
 /* Button style */
 .btn {
   font-size: 15px;
@@ -841,11 +847,11 @@ blockquote {
   font-weight: 600;
 }
 
-.content * {
+.content p, img {
   margin-bottom: 20px;
 }
 
-.content img{
+.content img {
   max-width: 100%;
   height: auto;
 }

@@ -103,6 +103,10 @@ url = "https://pixabay.com/users/fill-8988/"
 name = "Free-Photos"
 url = "https://pixabay.com/users/free-photos-242387/"
 
+[[params.pixabay]]
+name = "StockSnap"
+url = "https://pixabay.com/users/stocksnap-894430/"
+
 # social site
 [[params.social]]
 icon = "ti-facebook"

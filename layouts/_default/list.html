@@ -20,20 +20,22 @@
         {{ $paginator := .Paginate .Data.Pages }}
         <div class="row masonry-container">
           {{ range $paginator.Pages }}
-          <div class="col-sm-6 mb-5">
-            <article class="text-center">
-              {{- if (isset .Params "image") }}
-              {{ $alt := index (last 1 (split (.Params.Image | absURL) "/")) 0 }}
-                <img class="img-fluid mb-4" src="{{.Params.Image | absURL }}" alt="{{ $alt }}">
-                <p class="text-uppercase mb-2">{{ .Params.Categories }}</p>
-              {{ else }}
-                {{ $image := replace (print "/images/" (lower .Params.Title)) "é" "e" }}
-                <img class="img-fluid mb-4" src="{{ $image | absURL }}.jpg" alt="{{ .Title }}">
-              {{ end }}
-              <h4 class="title-border"><a class="text-dark" href="{{.Permalink}}">{{.Title}}</a></h4>
-              <p>{{ .Summary }}</p>
-            </article>
-          </div>
+            {{ if not .Draft }}
+            <div class="col-sm-6 mb-5">
+              <article class="text-center">
+                {{- if (isset .Params "image") }}
+                {{ $alt := index (last 1 (split (.Params.Image | absURL) "/")) 0 }}
+                  <img class="img-fluid mb-4" src="{{.Params.Image | absURL }}" alt="{{ $alt }}">
+                  <p class="text-uppercase mb-2">{{ .Params.Categories }}</p>
+                {{ else }}
+                  {{ $image := replace (print "/images/" (lower .Params.Title)) "é" "e" }}
+                  <img class="img-fluid mb-4" src="{{ $image | absURL }}.jpg" alt="{{ .Title }}">
+                {{ end }}
+                <h4 class="title-border"><a class="text-dark" href="{{.Permalink}}">{{.Title}}</a></h4>
+                <p>{{ .Summary }}</p>
+              </article>
+            </div>
+            {{ end }}
           {{ end }}
         </div>
 
