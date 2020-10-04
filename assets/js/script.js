@@ -4,7 +4,54 @@
   // Preloader js    
   $(window).on('load', function () {
     $('.preloader').fadeOut(300);
+    speechMeta();
   });
+
+  // speech advice for blind people
+  function speechAdvice() {
+    $('meta').each(function() {
+      if ($(this).attr('name') === 'baseURL' && 'http:' + $(this).attr('content') === window.location.href) {
+        let message = 'Aide aux non-voyants avec la combinaison Control + Entrée';
+        safeSpeechMessage(message);
+      }
+    });
+  }
+
+  // speech metadata for blind people
+  function speechMeta() {
+    var description;
+    var title;
+    
+    $('meta').each(function() {
+      if ($(this).attr('name') === 'description') {
+        description = $(this).attr('content');
+      }
+      if ($(this).attr('name') === 'title') {
+        title = $(this).attr('content');
+      }
+    });
+
+    safeSpeechMessage(title + ' : ' + description);
+  }
+
+  function safeSpeechMessage(message) {
+    if(window.speechSynthesis.getVoices().find(v => v.lang === 'fr-FR') === undefined) {
+      window.speechSynthesis.addEventListener('voiceschanged', function() {
+        speechMessage(message);
+      });
+    } else {
+      speechMessage(message);
+    }
+  }
+
+  function speechMessage(text) {
+    var message = new SpeechSynthesisUtterance();
+    message.lang = 'fr-FR';
+    message.text = text;
+    message.rate = 0.9;
+    message.volume = 0.15;
+    window.speechSynthesis.speak(message);
+  }
 
   // headroom js
   $('.navigation').headroom();
@@ -51,19 +98,6 @@
       columnWidth: 1
     });
   }, 500);
-
-
-  // instafeed
-  if (($('#instafeed').length) !== 0) {
-    var accessToken = $('#instafeed').attr('data-accessToken');
-    var userFeed = new Instafeed({
-      get: 'user',
-      resolution: 'low_resolution',
-      accessToken: accessToken,
-      template: '<div class="instagram-post"><img class="img-fluid w-100" src="{{image}}" alt="instagram-image"><ul class="list-inline text-center"><li class="list-inline-item"><a href="{{link}}" target="_blank" class="text-white"><i class="ti-heart mr-2"></i>{{likes}}</a></li><li class="list-inline-item"><a href="{{link}}" target="_blank" class="text-white"><i class="ti-comments mr-2"></i>{{comments}}</a></li></ul></div>'
-    });
-    userFeed.run();
-  }
 
   setTimeout(function () {
     $('.instagram-slider').slick({

@@ -39,7 +39,7 @@ printf "\033[0;32mCommiting changes to submodule...\033[0m\n"
 git commit -m "$msg"
 
 # Push source and build repos.
-git push origin master
+git push --force origin master
 
 printf "\033[0;32mCommiting changes...\033[0m\n"
 
@@ -53,4 +53,4 @@ git add .
 git commit -m "$msg"
 
 # Push source and build repos.
-git push origin master
+git push --force origin master
