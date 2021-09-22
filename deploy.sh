@@ -16,7 +16,7 @@ cat /dev/null > .gitmodules
 printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 
 # Adding git submodules
-git submodule add --force -b master https://github.com/Sarvhangel/Sarvhangel.github.io public
+git submodule add --force -b master git@github.com:Sarvhangel/Sarvhangel.github.io.git public
 
 # Build the project.
 hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
