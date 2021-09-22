@@ -23,4 +23,6 @@
   <link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }} " type="image/x-icon">
   <link rel="icon" href="{{ `images/favicon.png` | absURL }} " type="image/x-icon">
 
+  {{ $styles := resources.Get "css/dark.css" | minify }}
+  <link disabled rel="stylesheet" href="{{ $styles.Permalink }}" id="dark-mode-theme" media="screen">
 </head>

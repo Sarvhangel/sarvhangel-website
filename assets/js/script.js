@@ -4,54 +4,7 @@
   // Preloader js    
   $(window).on('load', function () {
     $('.preloader').fadeOut(300);
-    speechMeta();
   });
-
-  // speech advice for blind people
-  function speechAdvice() {
-    $('meta').each(function() {
-      if ($(this).attr('name') === 'baseURL' && 'http:' + $(this).attr('content') === window.location.href) {
-        let message = 'Aide aux non-voyants avec la combinaison Control + Entrée';
-        safeSpeechMessage(message);
-      }
-    });
-  }
-
-  // speech metadata for blind people
-  function speechMeta() {
-    var description;
-    var title;
-    
-    $('meta').each(function() {
-      if ($(this).attr('name') === 'description') {
-        description = $(this).attr('content');
-      }
-      if ($(this).attr('name') === 'title') {
-        title = $(this).attr('content');
-      }
-    });
-
-    safeSpeechMessage(title + ' : ' + description);
-  }
-
-  function safeSpeechMessage(message) {
-    if(window.speechSynthesis.getVoices().find(v => v.lang === 'fr-FR') === undefined) {
-      window.speechSynthesis.addEventListener('voiceschanged', function() {
-        speechMessage(message);
-      });
-    } else {
-      speechMessage(message);
-    }
-  }
-
-  function speechMessage(text) {
-    var message = new SpeechSynthesisUtterance();
-    message.lang = 'fr-FR';
-    message.text = text;
-    message.rate = 0.9;
-    message.volume = 0.15;
-    window.speechSynthesis.speak(message);
-  }
 
   // headroom js
   $('.navigation').headroom();
@@ -90,6 +43,31 @@
       }
     ]
   });
+
+  // Dark mode
+  const toggle = document.getElementById("dark-mode-toggle");
+  const darkTheme = document.getElementById("dark-mode-theme");
+
+  toggle.addEventListener("click", () => {
+    if (toggle.className.indexOf("sun") > 0) {
+      setTheme("dark");
+    } else if (toggle.className.indexOf("moon") > 0) {
+      setTheme("light");
+    }
+  });
+
+  const savedTheme = localStorage.getItem("theme") || "light";
+  setTheme(savedTheme);
+  function setTheme(mode) {
+    localStorage.setItem("theme", mode);
+    if (mode === "dark") {
+      darkTheme.disabled = false;
+      toggle.className = toggle.className.replace("sun", "moon");
+    } else if (mode === "light") {
+      darkTheme.disabled = true;
+      toggle.className = toggle.className.replace("moon", "sun");
+    }
+  }
 
   // Masonry
   setTimeout(function(){
