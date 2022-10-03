@@ -2,11 +2,10 @@
 title: "Notre premier talk"
 date: 2019-07-04
 image: "images/post/epanoui-au-travail-village.png"
+imageAlt: "Andréa et Agnès pendant leur premier talk au Village By CA"
 author: "Sarvhangel"
 description: "Un premier pas vers une carrière de speakeuse ?"
 type: "post"
-categories:
-  - Passions
 tags:
   - Passions
   - Speaker

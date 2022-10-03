@@ -3,22 +3,22 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
-          <h6>C'est moi :)</h6>
+          <h3>C'est moi :)</h3>
           <ul class="list-unstyled">
             <li class="font-secondary text-dark">{{.Site.Params.bio | markdownify }}</li>
           </ul>
         </div>
         <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-          <h6>Contactez-moi</h6>
+          <h3>Contactez-moi</h3>
           <ul class="list-unstyled">
             <li class="font-secondary text-dark">Email : {{ .Site.Params.email | markdownify }}</li>
           </ul>
         </div>
         <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-          <h6>Mes réseaux sociaux</h6>
+          <h3>Mes réseaux sociaux</h3>
           <ul class="list-inline d-inline-block">
             {{ range .Site.Params.social }}
-            <li class="list-inline-item"><a href="{{ .URL }}" class="text-dark"><i class="{{ .icon }}"></i></a></li>
+            <li class="list-inline-item"><a href="{{ .URL }}" class="text-dark" aria-label="Link to {{ .URL }} link"><i class="{{ .icon }}"></i></a></li>
             {{ end }}
           </ul>
         </div>

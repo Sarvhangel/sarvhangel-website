@@ -2,11 +2,10 @@
 title: "Faire un tatouage"
 date: 2020-09-02
 image: "images/post/tatouage.jpg"
+imageAlt: "bras d'Agnès, sa soeur et sa mère avec le même tatouage"
 author: "Sarvhangel"
 description: "Le premier, c'est le dur plus à ce qu'il parait..."
 type: "post"
-categories:
-  - Tattoo
 tags:
   - Curiosités
   - Tattoo

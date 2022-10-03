@@ -2,11 +2,10 @@
 title: "Notre première conférence"
 date: 2019-10-21
 image: "images/post/codeurs-en-seine-rouen.jpg"
+imageAlt: "cathédrale de Rouen"
 author: "Agnes Maury"
 description: "Le premier grand défi !"
 type: "post"
-categories:
-  - Passions
 tags:
   - Passions
   - Speaker

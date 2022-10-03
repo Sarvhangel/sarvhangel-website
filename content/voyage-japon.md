@@ -2,11 +2,10 @@
 title: "De retour du Japon !"
 date: 2019-05-07
 image: "images/post/restaurant-japonais-izakaya.jpg"
+imageAlt: "izakaya restaurant traditionnel japonais"
 author: "Sarvhangel"
 description: "Ça y est, je l’ai fait : je suis allée au Japon !"
 type: "post"
-categories:
-  - "Japon"
 tags:
   - "Japon"
   - "Voyage"

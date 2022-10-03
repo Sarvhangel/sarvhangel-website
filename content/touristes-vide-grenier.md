@@ -2,11 +2,10 @@
 title: "Des touristes au vide-grenier"
 date: 2019-05-12
 image: "images/post/vide-grenier.jpg"
+imageAlt: "Agnès et Dimitri au vide-grenier avec une table pleines d'objets à vendre"
 author: "Sarvhangel"
 description: "Vous êtes-vous déjà dit : « tiens ce serait utile ça », « oh ça décorerait bien telle pièce », « bah on peut le garder », « ça peut servir » ? Cet article est pour vous !"
 type: "post"
-categories:
-  - Curiosités
 tags:
   - Curiosités
 ---

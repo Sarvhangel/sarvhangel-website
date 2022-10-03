@@ -5,7 +5,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <h4>{{.Title}}</h4>
+        <h2>{{.Title}}</h2>
       </div>
     </div>
   </div>
@@ -26,12 +26,12 @@
                 {{- if (isset .Params "image") }}
                 {{ $alt := index (last 1 (split (.Params.Image | absURL) "/")) 0 }}
                   <img class="img-fluid mb-4" src="{{.Params.Image | absURL }}" alt="{{ $alt }}">
-                  <p class="text-uppercase mb-2">{{ .Params.Categories }}</p>
+                  <p class="text-uppercase mb-2">{{ .Params.Tags }}</p>
                 {{ else }}
                   {{ $image := replace (print "/images/" (lower .Params.Title)) "é" "e" }}
                   <img class="img-fluid mb-4" src="{{ $image | absURL }}.jpg" alt="{{ .Title }}">
                 {{ end }}
-                <h4 class="title-border"><a class="text-dark" href="{{.Permalink}}">{{.Title}}</a></h4>
+                <h2 class="title-border"><a class="text-dark" href="{{.Permalink}}">{{.Title}}</a></h2>
                 <p>{{ .Summary }}</p>
               </article>
             </div>
@@ -100,14 +100,6 @@
                   </a>
                 </li>
                 {{ end }}
-                {{ end }}
-                <!-- Next page. -->
-                {{ if $paginator.HasNext }}
-                <li class="page-item">
-                  <a href="{{ $paginator.Next.URL }}" class="page-link">
-                    Suivant &raquo;
-                  </a>
-                </li>
                 {{ end }}
               </ul>
             </nav>

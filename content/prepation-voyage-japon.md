@@ -2,11 +2,10 @@
 title: "Comment se préparer pour aller au Japon ?"
 date: 2019-05-11
 image: "images/post/japon-mur-souhaits.jpg"
+imageAlt: "panneau voeux japonais"
 author: "Agnes Maury"
 description: "À ne pas négliger car une fois sur place, les informations sont plus compliquées à obtenir (カタカナに気をつけて)"
 type: "post"
-categories:
-  - Japon
 tags:
   - Japon
 ---

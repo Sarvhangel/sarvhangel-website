@@ -2,11 +2,10 @@
 title: "Etre Speakeuse"
 date: 2019-07-04
 image: "images/post/speaker-andrea-agnes.jpg"
+imageAlt: "Andréa et Agnès au Web2Day 2018"
 author: "Agnes Maury"
 description: "Ou la folle aventure de deux filles qui prennent la parole devant un public pour la première fois."
 type: "post"
-categories:
-  - Passions
 tags:
   - Passions
 ---

@@ -2,11 +2,10 @@
 title: "Le dépouillement"
 date: 2019-05-26
 image: "images/post/depouillement.jpg"
+imageAlt: "urne de vote avec main qui insère un bulletin"
 author: "Sarvhangel"
 description: "Faire plus que son devoir : aider à la communauté !"
 type: "post"
-categories:
-  - Curiosités
 tags:
   - Curiosités
 ---
